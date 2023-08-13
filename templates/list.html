@@ -1,0 +1,16 @@
+{% extends 'main.html'%}
+
+{% block content%}
+<h1>List of articls Template</h1>
+<a href="{% url 'create-article' %}">Create new article</a>
+<div>
+    <ul>
+        {% for article in articles %}
+        <li>
+            {{article.id}}
+            {{article.title}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content%}
